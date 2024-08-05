@@ -2,12 +2,13 @@
 /* eslint-disable no-async-promise-executor */
 
 import axios from "axios";
-
+// const BASE_URL = "http://localhost:5000" 
+const BASE_URL = "https://gupshup-e5ii.onrender.com" 
 
 export function signUp(userData) {
     return new Promise(async (resolve,reject) => {
       const response = await axios.post(
-        "http://localhost:5000/auth/signUpUser",
+        BASE_URL+"/auth/signUpUser",
         userData,
         {
           headers: {
@@ -32,7 +33,7 @@ export function fetchLoggedInUser() {
         Authorization: `Bearer ${token}`, // Add the token to the Authorization header
       };
      
-      const response = await axios.get('http://localhost:5000/user/own', { headers });
+      const response = await axios.get(BASE_URL+'/user/own', { headers });
       if(response.status===200){
         resolve(response);
       }else{
@@ -48,7 +49,7 @@ export function Login(loginInfo) {
     return new Promise(async (resolve,reject) => {
       try{
         const response = await axios.post(
-          "http://localhost:5000/auth/loginUser",
+          BASE_URL+"/auth/loginUser",
           loginInfo,
           {
             headers: {

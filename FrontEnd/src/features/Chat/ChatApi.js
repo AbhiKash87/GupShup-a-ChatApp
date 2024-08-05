@@ -2,7 +2,8 @@
 /* eslint-disable no-async-promise-executor */
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000" 
+const BASE_URL = "https://gupshup-e5ii.onrender.com" 
+// const BASE_URL = "http://localhost:5000" 
 const getHeader = () => {
   const token = localStorage.getItem("token");
   const headers = {
