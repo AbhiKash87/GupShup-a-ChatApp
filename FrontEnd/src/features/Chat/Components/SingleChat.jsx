@@ -29,7 +29,9 @@ import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 import TypingIndicator from "./TypingIndicator";
 // import { useSocket } from "../../../SocketContext";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://gupshup-e5ii.onrender.com";
+
+// const ENDPOINT = "http://localhost:5000";
 let socket;
 let selectedChatCompare;
 
